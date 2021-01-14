@@ -15,6 +15,20 @@ html {
   /* 2 */
 }
 
+/* be-vietnam-regular - latin */
+@font-face {
+  font-family: 'Be Vietnam';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/be-vietnam-v2-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/be-vietnam-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/be-vietnam-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/be-vietnam-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/be-vietnam-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/be-vietnam-v2-latin-regular.svg#BeVietnam') format('svg'); /* Legacy iOS */
+}
+
 /* Sections
    ========================================================================== */
 /**
@@ -1162,7 +1176,7 @@ footer .copyright {
 }
 
 .post .post-content .post-title a {
-  font-family: 'PT Serif', serif;
+  font-family: 'Be Vietnam', serif;
   text-decoration: none;
   color: #263959;
 }
