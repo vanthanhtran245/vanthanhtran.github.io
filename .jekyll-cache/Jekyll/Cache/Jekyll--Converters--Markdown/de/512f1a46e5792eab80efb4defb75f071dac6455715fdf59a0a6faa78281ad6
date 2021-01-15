@@ -1,0 +1,107 @@
+I"<p>In this post, i will critically evaluate Swift dependency managers CocoaPods and Carthage so that iOS developers can make the right choice for their apps.</p>
+
+<h2 id="cocoapods">CocoaPods</h2>
+
+<p>Love it or hate it, you have to use it. Cocoapods exists since the old Objective-C days and works with Swift as well. This is mostly used dependency manage so far for the iOS project which is the de facto standard tool. CocoaPods is built with Ruby and is installable with the default Ruby available on OS X.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo gem install cocoapods
+</span></code></pre></div></div>
+
+<p>CocoaPods can be initialised with pod init command which will create template Podfile but we can create our own simple Podfile will look like this</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">platform :ios, '8.0'
+use_frameworks!
+target 'MyApp' do
+</span><span class="gp">  pod 'SwiftyJSON', '~&gt;</span><span class="w"> </span>2.3<span class="s1">'
+</span><span class="go">end
+</span></code></pre></div></div>
+
+<p>This will setup SwiftyJSON which is the very popular Swift library for parsing JSON for the My App target. Now, we can download dependency using the magical command</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pod install
+</span></code></pre></div></div>
+
+<h3 id="what-changes-cocoapods-made">What Changes CocoaPods Made?</h3>
+
+<p>The above command (pod install) is very magical which make lots of changes to our Xcode project under the hood. The most of the times, it’s really hard to understand that what has been changed.</p>
+
+<ul>
+  <li>CocoaPods creates Xcode Workspace directory, which has .xcworkspace extension where it builds all the dependency. We have to use Xcode workspace in order to make CocoaPods work.</li>
+  <li>CocoaPods added some scripts in the build phases of our target. There are usually three scripts added to the build phases of the target</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods1.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>Added Podfile.lock (Locked versions of libraries)</li>
+  <li>Linked the Pods Frameworks to “Link Binaries with Libraries”</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods2.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>A Pods directory containing source code of the Pod dependencies, supporting files, xcconfigfiles</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods3.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>Lots of things inside your Xcode build Settings. It’s hard to cover everything here.</li>
+</ul>
+
+<h3 id="cocoapods-build-process">CocoaPods Build Process</h3>
+
+<p>The typical build process that CocoaPods projects include following steps.</p>
+
+<ul>
+  <li>CocoaPods will build and compile our frameworks every time whenever you are doing the clean build or run pod install or pod update for the project.</li>
+  <li>Xcode then checks if Podfile.lock has changed if that changed then Xcode will build the dependency framework again otherwise uses the pre-built frameworks.</li>
+  <li>You might have seen that project taking a long time when you do the clean build or delete derived data when using CocoaPods.</li>
+  <li>CocoaPods will build all the libraries mentioned in the Podfile for that target, there might be some cases where you don’t want to build some libraries all the time but CocoaPods won’t have that option.</li>
+</ul>
+
+<h3 id="benefits-and-downsides-of-cocoapods">Benefits and Downsides of Cocoapods</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Benefits</th>
+      <th>Downsides</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CocoaPods is easy to setup</td>
+      <td>It requires knowledge of another programming language i.e Ruby on which CocoaPods is built.</td>
+    </tr>
+    <tr>
+      <td>CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>Hard to integrate when already using Xcode workspace.</td>
+    </tr>
+    <tr>
+      <td>The CocoaPods community has done an impressive job to fix Apple’s shortcomings</td>
+      <td>Hard to remove once integrated.</td>
+    </tr>
+    <tr>
+      <td>CocoaPods supports libraries having subspec.</td>
+      <td>CocoaPods takes controls of entire Xcode project and if something fails entire project stops building. The fixing the errors thrown by CocoaPods are the hard and time-consuming task and requires an understanding of what CocoaPods changed inside the iOS project.</td>
+    </tr>
+    <tr>
+      <td>Lots of contributors with well-grown community</td>
+      <td>Pods force your project into a specific structure. CocoaPods updating Xcode Projects and Files is like magic without understanding what’s changed. It works in a black box way.</td>
+    </tr>
+    <tr>
+      <td>Works well for the small projects with less code to get something working very quickly.</td>
+      <td>Integrating with Continuous Integration Server is hard as we have to install and manage Ruby libraries. All the dependency needs to be installed and built for every build Or we have to check in the entire third-party dependencies inside the project. Caching mechanism doesn’t always give clean results.</td>
+    </tr>
+    <tr>
+      <td>CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>The building of iOS app became an intransparent and slow process.</td>
+    </tr>
+    <tr>
+      <td>CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>Building libraries and frameworks that support CocoaPods became such a pain for iOS developers who are not skilled in Ruby. The developer needs to write .podspec file and follow many unrelated Ruby conventions.</td>
+    </tr>
+  </tbody>
+</table>
+:ET
