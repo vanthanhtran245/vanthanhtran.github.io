@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Carthage or Cocoapods - Hello, I'm Trần Văn Thành</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Hello, I'm Trần Văn Thành" property="og:site_name">
+  
+    <meta content="Carthage or Cocoapods" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+  
+  
+    <meta content="https://vanthanhtran245.github.io//carthage-or-cocoapods/" property="og:url">
+  
+  
+    <meta content="2021-01-15T04:00:00+07:00" property="article:published_time">
+    <meta content="https://vanthanhtran245.github.io//about/" property="article:author">
+  
+  
+    <meta content="https://vanthanhtran245.github.io///assets/img/carthagevscocoapods.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="carthage" property="article:tag">
+    
+    <meta content="cocoapods" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+  
+    <meta name="twitter:title" content="Carthage or Cocoapods">
+  
+  
+    <meta name="twitter:url" content="https://vanthanhtran245.github.io//carthage-or-cocoapods/">
+  
+  
+    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+  
+  
+    <meta name="twitter:image:src" content="https://vanthanhtran245.github.io///assets/img/carthagevscocoapods.png">
+  
+
+	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="//assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="//assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="//assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="//assets/img/favicon/apple-touch-icon-144x144.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="//assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="//assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="//"><img src="//assets/img/vanthanh.jpg" alt="Thanh Tran Van"></a>
+      </div>
+      <div class="author-name">Thanh Tran Van</div>
+      <p>I am a mobile developer focusing on iOS development. Always hungry to keep learning.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/HceThanh" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/thanhtran245" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/vanthanhtran245" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:vanthanhtran.it@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2021 &copy; Thanh Tran Van</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <figure>
+        <img class="page-image" src=//assets/img/carthagevscocoapods.png alt="Carthage or Cocoapods">
+        
+      </figure>
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Carthage or Cocoapods</h1>
+        <div class="page-date"><span>2021, Jan 15&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>In this post, i will critically evaluate Swift dependency managers CocoaPods and Carthage so that iOS developers can make the right choice for their apps.</p>
+
+<h2 id="cocoapods">CocoaPods</h2>
+
+<p>Love it or hate it, you have to use it. Cocoapods exists since the old Objective-C days and works with Swift as well. This is mostly used dependency manage so far for the iOS project which is the de facto standard tool. CocoaPods is built with Ruby and is installable with the default Ruby available on OS X.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo gem install cocoapods
+</span></code></pre></div></div>
+
+<p>CocoaPods can be initialised with pod init command which will create template Podfile but we can create our own simple Podfile will look like this</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">platform :ios, '8.0'
+use_frameworks!
+target 'MyApp' do
+</span><span class="gp">  pod 'SwiftyJSON', '~&gt;</span><span class="w"> </span>2.3<span class="s1">'
+</span><span class="go">end
+</span></code></pre></div></div>
+
+<p>This will setup SwiftyJSON which is the very popular Swift library for parsing JSON for the My App target. Now, we can download dependency using the magical command</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">pod install
+</span></code></pre></div></div>
+
+<h3 id="what-changes-cocoapods-made">What Changes CocoaPods Made?</h3>
+
+<p>The above command (pod install) is very magical which make lots of changes to our Xcode project under the hood. The most of the times, it’s really hard to understand that what has been changed.</p>
+
+<ul>
+  <li>CocoaPods creates Xcode Workspace directory, which has .xcworkspace extension where it builds all the dependency. We have to use Xcode workspace in order to make CocoaPods work.</li>
+  <li>CocoaPods added some scripts in the build phases of our target. There are usually three scripts added to the build phases of the target</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods1.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>Added Podfile.lock (Locked versions of libraries)</li>
+  <li>Linked the Pods Frameworks to “Link Binaries with Libraries”</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods2.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>A Pods directory containing source code of the Pod dependencies, supporting files, xcconfigfiles</li>
+</ul>
+
+<p><img src="//assets/img/cocoapods3.png" alt="Cocoapods" /></p>
+
+<ul>
+  <li>Lots of things inside your Xcode build Settings. It’s hard to cover everything here.</li>
+</ul>
+
+<h3 id="cocoapods-build-process">CocoaPods Build Process</h3>
+
+<p>The typical build process that CocoaPods projects include following steps.</p>
+
+<ul>
+  <li>CocoaPods will build and compile our frameworks every time whenever you are doing the clean build or run pod install or pod update for the project.</li>
+  <li>Xcode then checks if Podfile.lock has changed if that changed then Xcode will build the dependency framework again otherwise uses the pre-built frameworks.</li>
+  <li>You might have seen that project taking a long time when you do the clean build or delete derived data when using CocoaPods.</li>
+  <li>CocoaPods will build all the libraries mentioned in the Podfile for that target, there might be some cases where you don’t want to build some libraries all the time but CocoaPods won’t have that option.</li>
+</ul>
+
+<h3 id="benefits-and-downsides-of-cocoapods">Benefits and Downsides of Cocoapods</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Benefits</th>
+      <th>Downsides</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>* CocoaPods is easy to setup</td>
+      <td>Requires you to create new, dedicated Xcode workspace.</td>
+      <td>* It requires knowledge of another programming language i.e Ruby on which CocoaPods is built.</td>
+    </tr>
+    <tr>
+      <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>* Hard to integrate when already using Xcode workspace.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* The CocoaPods community has done an impressive job to fix Apple’s shortcomings</td>
+      <td>* Hard to remove once integrated.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* CocoaPods supports libraries having subspec.</td>
+      <td>* CocoaPods takes controls of entire Xcode project and if something fails entire project stops building. The fixing the errors thrown by CocoaPods are the hard and time-consuming task and requires an understanding of what CocoaPods changed inside the iOS project.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* Lots of contributors with well-grown community</td>
+      <td>* Pods force your project into a specific structure. CocoaPods updating Xcode Projects and Files is like magic without understanding what’s changed. It works in a black box way.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* Works well for the small projects with less code to get something working very quickly.</td>
+      <td>* Integrating with Continuous Integration Server is hard as we have to install and manage Ruby libraries. All the dependency needs to be installed and built for every build Or we have to check in the entire third-party dependencies inside the project. Caching mechanism doesn’t always give clean results.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>* The building of iOS app became an intransparent and slow process.</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
+      <td>* Building libraries and frameworks that support CocoaPods became such a pain for iOS developers who are not skilled in Ruby. The developer needs to write .podspec file and follow many unrelated Ruby conventions.</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Carthage or Cocoapods&url=https://vanthanhtran245.github.io//carthage-or-cocoapods/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=https://vanthanhtran245.github.io//carthage-or-cocoapods/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=https://vanthanhtran245.github.io//carthage-or-cocoapods/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="//tags#carthage" class="tag">&#35; carthage</a>
+          
+            <a href="//tags#cocoapods" class="tag">&#35; cocoapods</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
