@@ -65,8 +65,8 @@ The typical build process that CocoaPods projects include following steps.
 
 ### Benefits and Downsides of Cocoapods
 
-|                          Benefits                           |                                                                                      Downsides |
-| ------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+|                          Benefits                           |                                                             Downsides |
+| ------------------------------------------------------------- | ------------------------------------------------------------- |
 | * CocoaPods is easy to setup | * It requires knowledge of another programming language i.e Ruby on which CocoaPods is built.                       |
 | * CocoaPods automate the entire process of building, linking the dependency to targets.                     | * Hard to integrate when already using Xcode workspace. |
 | * The CocoaPods community has done an impressive job to fix Apple’s shortcomings                     | * Hard to remove once integrated. |
