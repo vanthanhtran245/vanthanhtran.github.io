@@ -199,49 +199,40 @@ target 'MyApp' do
     <tr>
       <th>Benefits</th>
       <th>Downsides</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>* CocoaPods is easy to setup</td>
-      <td>Requires you to create new, dedicated Xcode workspace.</td>
       <td>* It requires knowledge of another programming language i.e Ruby on which CocoaPods is built.</td>
     </tr>
     <tr>
       <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
       <td>* Hard to integrate when already using Xcode workspace.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* The CocoaPods community has done an impressive job to fix Apple’s shortcomings</td>
       <td>* Hard to remove once integrated.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* CocoaPods supports libraries having subspec.</td>
       <td>* CocoaPods takes controls of entire Xcode project and if something fails entire project stops building. The fixing the errors thrown by CocoaPods are the hard and time-consuming task and requires an understanding of what CocoaPods changed inside the iOS project.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* Lots of contributors with well-grown community</td>
       <td>* Pods force your project into a specific structure. CocoaPods updating Xcode Projects and Files is like magic without understanding what’s changed. It works in a black box way.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* Works well for the small projects with less code to get something working very quickly.</td>
       <td>* Integrating with Continuous Integration Server is hard as we have to install and manage Ruby libraries. All the dependency needs to be installed and built for every build Or we have to check in the entire third-party dependencies inside the project. Caching mechanism doesn’t always give clean results.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
       <td>* The building of iOS app became an intransparent and slow process.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>* CocoaPods automate the entire process of building, linking the dependency to targets.</td>
       <td>* Building libraries and frameworks that support CocoaPods became such a pain for iOS developers who are not skilled in Ruby. The developer needs to write .podspec file and follow many unrelated Ruby conventions.</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
