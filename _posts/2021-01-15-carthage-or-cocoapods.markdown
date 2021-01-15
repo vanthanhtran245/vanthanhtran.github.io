@@ -123,7 +123,7 @@ The typical build process that Carthage projects include following steps.
 |  Carthage is easy to integrate and easy to remove from the project if it doesn’t suit project needs.                    |  HCarthage has no clean way to support subspec within libraries. |
 |  Carthage won’t touch your Xcode settings or project files. It just downloads and builds the dependencies so you have proper control on what you are doing.                    |  Carthage checkout and builds the frameworks, we might need to check-in those frameworks for faster builds which adds repository size. |
 |  Carthage works great for the large or eclectic codebases because of its flexibility                    |  Carthage installed with homebrew is not backward compatible. |
-|  Building and updating lib(s) are easier with Carthage.                     |   |  The building of iOS app became an intransparent and slow process. |
+|  Building and updating lib(s) are easier with Carthage.                     |  The building of iOS app became an intransparent and slow process. |
 |  Making Swift libraries Carthage compatible is easy.                     |   |
 |  Decentralised                    |   |
 |  Supports submodules                    |   |
