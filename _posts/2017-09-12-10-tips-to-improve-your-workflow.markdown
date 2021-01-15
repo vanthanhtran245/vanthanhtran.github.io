@@ -1,28 +1,59 @@
 ---
 layout: post
-title: 10 Tips To Improve Your Workflow
-date: 2017-09-12 00:00:00 +0300
+title: Use multiple ssh-keys for different git accounts on the same computer
+date: 2021-01-15 00:00:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: workflow.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Productivity, Workflow] # add tag
 ---
 
-Asymmetrical portland enamel pin af heirloom ramps authentic thundercats. Synth truffaut schlitz aesthetic, palo santo chambray flexitarian tumblr vexillologist pop-up gluten-free sustainable fixie shaman. Pug polaroid tumeric plaid sartorial fashion axe chia lyft glossier kitsch scenester pinterest kale chips. Blog etsy umami fashion axe shoreditch. Prism chambray heirloom, drinking vinegar portland paleo slow-carb. Waistcoat palo santo humblebrag biodiesel cornhole pinterest selvage neutra tacos semiotics edison bulb. Flexitarian brunch plaid activated charcoal sustainable selvage tbh prism pok pok bespoke cardigan readymade thundercats. Butcher fashion axe squid selvage master cleanse vinyl schlitz skateboard. Lomo shaman man bun keffiyeh asymmetrical listicle. Kickstarter trust fund fanny pack post-ironic wayfarers swag kitsch. Shaman pug kale chips meh squid.
+At joining my current work place, I was asked to create a new GitHub account before I can be a member of the company’s GitHub organization and in turn get access to all the private project repositories.
+It wasn’t until I left the work laptop in my locker but still needed to get something done that I felt the need to manage both of my GitHub accounts on my personal laptop (who needs work-life balance?)
+To make things more complicated, the project I’m working on references other private repositories in its Cocoapods Specs dependencies block and needs to access them at `pod repo push` , which defaults to using my personal GitHub account’s ssh-key.
+After some trials and failures, here’s how I finally got it to work:
 
-###  Literally pickled twee man braid
-8-bit ugh selfies, literally pickled twee man braid four dollar toast migas. Slow-carb mustache meggings pok pok. Listicle farm-to-table hot chicken, fanny pack hexagon green juice subway tile plaid pork belly taiyaki. Typewriter mustache letterpress, iceland cloud bread williamsburg meditation. Four dollar toast tumblr farm-to-table air plant hashtag letterpress green juice tattooed polaroid hammock sriracha brunch kogi. Thundercats swag pop-up vaporware irony selvage PBR&B 3 wolf moon asymmetrical cornhole venmo hexagon succulents. Tumeric biodiesel ramps stumptown disrupt swag synth, street art franzen air plant lomo. Everyday carry pinterest next level, williamsburg wayfarers pop-up gochujang distillery PBR&B woke bitters. Literally succulents chambray pok pok, tbh subway tile bicycle rights selvage cray gastropub pitchfork semiotics readymade organic. Vape flexitarian tumblr raclette organic direct trade. Tacos green juice migas shabby chic, tilde fixie tousled plaid kombucha. +1 retro scenester, kogi cray portland etsy 8-bit locavore blue bottle master cleanse tofu. PBR&B adaptogen chartreuse knausgaard palo santo intelligentsia.
+### Create a new ssh-key and add it to the work GitHub account
 
-![Macbook]({{site.baseurl}}/assets/img/mac.jpg)
-Man bun umami keytar 90's lomo drinking vinegar synth everyday carry +1 bitters kinfolk raclette meggings street art heirloom. Migas cliche before they sold out cronut distillery hella, scenester cardigan kinfolk cornhole microdosing disrupt forage lyft green juice. Tofu deep v food truck live-edge edison bulb vice. Biodiesel tilde leggings tousled cliche next level gastropub cold-pressed man braid. Lyft humblebrag squid viral, vegan chicharrones vice kinfolk. Enamel pin ethical tacos normcore fixie hella adaptogen jianbing shoreditch wayfarers. Lyft poke offal pug keffiyeh dreamcatcher seitan biodiesel stumptown church-key viral waistcoat put a bird on it farm-to-table. Meggings pitchfork master cleanse pickled venmo. Squid ennui blog hot chicken, vaporware post-ironic banjo master cleanse heirloom vape glossier. Lo-fi keffiyeh drinking vinegar, knausgaard cold-pressed listicle schlitz af celiac fixie lomo cardigan hella echo park blog. Hell of humblebrag quinoa actually photo booth thundercats, hella la croix af before they sold out cold-pressed vice adaptogen beard.
+```console
+ssh-keygen -t rsa -b 4096 -C "my_work_email@my_company.com"
+```
 
-### Man bun umami keytar
-Chia pork belly XOXO shoreditch, helvetica butcher kogi offal portland 3 wolf moon. Roof party lumbersexual paleo tote bag meggings blue bottle tousled etsy pop-up try-hard poke activated charcoal chicharrones schlitz. Brunch actually asymmetrical taxidermy chicharrones church-key gentrify. Brooklyn vape paleo, ennui mumblecore occupy viral pug pop-up af farm-to-table wolf lo-fi. Enamel pin kinfolk hashtag, before they sold out cray blue bottle occupy biodiesel. Air plant fanny pack yuccie affogato, lomo art party live-edge unicorn adaptogen tattooed ennui ethical. Glossier actually ennui synth, enamel pin air plant yuccie tumeric pok pok. Ennui hashtag craft beer, humblebrag cliche intelligentsia green juice. Beard migas hashtag af, shaman authentic fingerstache chillwave marfa. Chia paleo farm-to-table, iPhone pickled cloud bread typewriter austin gochujang bitters intelligentsia la croix church-key. Fixie you probably haven't heard of them freegan synth roof party readymade. Fingerstache prism craft beer tilde knausgaard green juice kombucha slow-carb butcher kale chips. Snackwave organic tbh ennui XOXO. Hell of woke blue bottle, tofu roof party food truck pok pok thundercats. Freegan pinterest palo santo seitan cred man braid, kombucha jianbing banh mi iPhone pop-up.
+Say the new ssh-key was named “work_rsa”, now copy the content of the newly generated public key file (work_rsa.pub in this example) and paste it to the work GitHub account’s setting page as described in the GitHub help page.
 
->Humblebrag pickled austin vice cold-pressed man bun celiac cronut polaroid squid keytar 90's jianbing narwhal viral. Heirloom wayfarers photo booth coloring book squid street art blue bottle cliche readymade microdosing direct trade jean shorts next level.
+### Modify the ssh config file ( `~/.ssh/config`)
 
-Selvage messenger bag meh godard. Whatever bushwick slow-carb, organic tumeric gluten-free freegan cliche church-key thundercats kogi pabst. Hammock deep v everyday carry intelligentsia hell of helvetica. Occupy affogato pop-up bicycle rights paleo. Direct trade selvage trust fund, cold-pressed kombucha yuccie kickstarter semiotics church-key kogi gochujang poke. Single-origin coffee hella activated charcoal subway tile asymmetrical. Adaptogen normcore wayfarers pickled lomo. Ethical edison bulb shaman wayfarers cold-pressed woke. Helvetica selfies blue bottle deep v. Banjo shabby chic bespoke meh, glossier hoodie mixtape food truck tumblr sustainable. Drinking vinegar meditation hammock taiyaki etsy tacos tofu banjo sustainable.
+Open the config file in a text editor (create it if there isn’t one in the ~/.ssh folder yet) and add the following to it:
 
-Farm-to-table bespoke edison bulb, vinyl hell of cred taiyaki squid biodiesel la croix leggings drinking vinegar hot chicken live-edge. Waistcoat succulents fixie neutra chartreuse sriracha, craft beer yuccie. Ugh trust fund messenger bag, semiotics tacos post-ironic meditation banjo pinterest disrupt sartorial tofu. Meh health goth art party retro skateboard, pug vaporware shaman. Meh whatever microdosing cornhole. Hella salvia pinterest four loko shabby chic yr. Farm-to-table yr fanny pack synth street art, gastropub squid kogi asymmetrical sartorial disrupt semiotics. Kombucha copper mug vice sriracha +1. Tacos hashtag PBR&B taiyaki franzen cornhole. Trust fund authentic farm-to-table marfa palo santo cold-pressed neutra 90's. VHS artisan drinking vinegar readymade yr. Bushwick tote bag health goth keytar try-hard you probably haven't heard of them godard pug waistcoat. Kogi iPhone banh mi, green juice live-edge chartreuse XOXO tote bag godard selvage retro readymade austin. Leggings ramps tacos iceland raw denim semiotics woke hell of lomo. Brooklyn woke adaptogen normcore pitchfork skateboard.
+```console
+# Personal GitHub account
+Host github.com
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+# Work GitHub account
+Host github.com-work
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/work_rsa
+ ```
 
-Intelligentsia mixtape gastropub, mlkshk deep v plaid flexitarian vice. Succulents keytar craft beer shabby chic. Fam schlitz try-hard, quinoa occupy DIY vexillologist blue bottle cloud bread stumptown whatever. Sustainable cloud bread beard fanny pack vexillologist health goth. Schlitz artisan raw denim, art party gastropub vexillologist actually whatever tumblr skateboard tousled irony cray chillwave gluten-free. Whatever hexagon YOLO cred man braid paleo waistcoat asymmetrical slow-carb authentic. Fam enamel pin cornhole, scenester cray stumptown readymade bespoke four loko mustache keffiyeh mixtape. Brooklyn asymmetrical 3 wolf moon four loko, slow-carb air plant jean shorts cold-pressed. Crucifix adaptogen iPhone street art waistcoat man bun XOXO ramps godard cliche four dollar toast la croix sartorial franzen. Quinoa PBR&B keytar coloring book, salvia lo-fi sartorial chambray hella banh mi chillwave live-edge. Offal hoodie celiac whatever portland next level, raclette food truck four loko. Craft beer kale chips banjo humblebrag brunch ugh. Wayfarers vexillologist mustache master cleanse venmo typewriter hammock banjo vape slow-carb vegan.
+### Clone the work project repo (with a slightly different address)
+
+To clone the work project repo using the new ssh-key we need to tweak a little bit on the repo’s ssh address. The host url needs to match the Host defined in the ssh config file from last step, namely, where in the address there is github.com, replace it with github.com-work.
+
+E.g., with the following private repo ssh address we get from GitHub:
+
+>git@github.com:[my work GitHub group]/[my project].git
+
+We need to tweak its address like this before we can `git clone` it:
+
+>git@github.com-work:[my work GitHub group]/[my project].git
+
+```console
+git clone git@github.com-work:[my work GitHub group]/[my project].git
+```
