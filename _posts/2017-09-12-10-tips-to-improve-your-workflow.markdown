@@ -9,11 +9,13 @@ tags: [Productivity, Workflow] # add tag
 ---
 
 At joining my current work place, I was asked to create a new GitHub account before I can be a member of the company’s GitHub organization and in turn get access to all the private project repositories.
+
 It wasn’t until I left the work laptop in my locker but still needed to get something done that I felt the need to manage both of my GitHub accounts on my personal laptop (who needs work-life balance?)
+
 To make things more complicated, the project I’m working on references other private repositories in its Cocoapods Specs dependencies block and needs to access them at `pod repo push` , which defaults to using my personal GitHub account’s ssh-key.
 After some trials and failures, here’s how I finally got it to work:
 
-### Create a new ssh-key and add it to the work GitHub account
+### 1. Create a new ssh-key and add it to the work GitHub account
 
 ```console
 ssh-keygen -t rsa -b 4096 -C "my_work_email@my_company.com"
@@ -21,7 +23,7 @@ ssh-keygen -t rsa -b 4096 -C "my_work_email@my_company.com"
 
 Say the new ssh-key was named “work_rsa”, now copy the content of the newly generated public key file (work_rsa.pub in this example) and paste it to the work GitHub account’s setting page as described in the GitHub help page.
 
-### Modify the ssh config file ( `~/.ssh/config`)
+### 2. Modify the ssh config file ( `~/.ssh/config`)
 
 Open the config file in a text editor (create it if there isn’t one in the ~/.ssh folder yet) and add the following to it:
 
@@ -42,7 +44,7 @@ Host github.com-work
  IdentityFile ~/.ssh/work_rsa
  ```
 
-### Clone the work project repo (with a slightly different address)
+### 3. Clone the work project repo (with a slightly different address)
 
 To clone the work project repo using the new ssh-key we need to tweak a little bit on the repo’s ssh address. The host url needs to match the Host defined in the ssh config file from last step, namely, where in the address there is github.com, replace it with github.com-work.
 
