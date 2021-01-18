@@ -13,7 +13,7 @@ Những tâm sự dưới đây không hẳn là những trăn trở ở thời 
 
 ## Công việc
 
-Tất nhiên rồi, như tiêu đề là `Tâm sự nghề` nên mình muốn chia sẻ vấn đề này trước tiên. Sau một thời gian dài làm iOS mình thấy nó khá là nhỏ bé. Mình dạo này thích làm những việc phục vụ cho team như auto build hay viết cái core network gì đó vì mình rất ghét việc code giao diện hay làm mấy cái animation. Tất nhiên thích là một chuyện nhưng mà đến lúc task dí vào mặt thì cũng phải lo mà làm thôi
+Tất nhiên rồi, như tiêu đề là **Tâm sự nghề** nên mình muốn chia sẻ vấn đề này trước tiên. Sau một thời gian dài làm iOS mình thấy nó khá là nhỏ bé. Mình dạo này thích làm những việc phục vụ cho team như auto build hay viết cái core network gì đó vì mình rất ghét việc code giao diện hay làm mấy cái animation. Tất nhiên thích là một chuyện nhưng mà đến lúc task dí vào mặt thì cũng phải lo mà làm thôi
 
 Một điều mình trăn trở ở độ gần đây là có nên chuyển sáng một công việc khác hay một ngôn ngữ khác không. Mình không sợ làm không được ngôn ngữ khác vì cũng không đến nỗi dốt lắm mà không thấm được. Nhưng mà khi cân nhắc những gì đang có và đang làm ở thời điểm hiện tại mình lại thấy có lẽ mình nên hoàn thiện thật tốt cái đang theo đuổi đã
 
@@ -25,7 +25,7 @@ Cái này thì ở công ty hiện tại tầm 6 tháng thì mình sẽ ngồi n
 
 Vấn đề này thì cũng khó đánh giá được. Mình không cho rằng bản thân mình kém nhưng mà để nói giỏi thì càng không. Nói chung là tạm được hoặc đủ xài. So với các bạn trẻ hiện nay thì mình cảm thấy các bạn ấy trội hơn mình. Các bạn được đào tạo khá bài bản và có một định hướng cũng như lộ trình khá rõ ràng, được tiếp cận thực tế từ khá sớm. Mình thì không được như vậy vì backgroud của mình là dân kinh tế và cũng vì đam mê nên mới chuyển hướng sang ngành này
 
-Nhiều đứa bạn đại học và thầy mình hay thấy mình than thường bảo `Em hơn mấy đứa kinh nghiệm mà, lo gì mà cứ than hoài`. Thật ra mình thấy nó chỉ đúng một phần. Giữa năm 1 với năm 3 hay 4 còn có sự khác biệt chứ giữa 5 và 7 năm thì không khác nhau nhiều lắm.
+Nhiều đứa bạn đại học và thầy mình hay thấy mình than thường bảo **Em hơn mấy đứa kinh nghiệm mà, lo gì mà cứ than hoài**. Thật ra mình thấy nó chỉ đúng một phần. Giữa năm 1 với năm 3 hay 4 còn có sự khác biệt chứ giữa 5 và 7 năm thì không khác nhau nhiều lắm.
 
 ## Môi trường làm việc
 
@@ -41,9 +41,9 @@ Mình thấy ở đây đồng nghiệp khá vui vẻ, mình may mắn khi ở c
 
 ### Team
 
-Nói về team thì thường xét trên 2 yếu tố là `văn hóa của bản thân` và `văn hóa team`. 
+Nói về team thì thường xét trên 2 yếu tố là **văn hóa của bản thân** và **văn hóa team**. 
 * Văn hóa bản thân: Cái này tùy tính cách mỗi người. Mình may mắn khi vào làm với các bạn có nét tính cách tương đồng và khá vui vẻ. Bạn trẻ có và người lớn tuổi hơn có nhưng chung quy lại mình thấy bọn mình khá hòa hợp trong các vấn đề.
-* Văn hóa team: Cái này được tạo bởi `văn hóa của thành viên trong team` và thường ảnh hưởng bới `văn hóa công ty`. Như mình nói ở trên vì mình và các bạn trong team cũng có tính cách tương đồng nên nói chung team mình khá vui vẻ. Các bạn giúp đỡ nhau khá nhiều. Nói đến `văn hóa công ty` thì thường nói đến việc `people come and go`, nó ảnh hưởng khá nhiều đến bản thân và team. Mình may mắn vì team mình khá ổn định nhưng nhìn qua nhiều team khác thì không được vậy
+* Văn hóa team: Cái này được tạo bởi **văn hóa của thành viên trong team** và thường ảnh hưởng bới **văn hóa công ty**. Như mình nói ở trên vì mình và các bạn trong team cũng có tính cách tương đồng nên nói chung team mình khá vui vẻ. Các bạn giúp đỡ nhau khá nhiều. Nói đến **văn hóa công ty** thì thường nói đến việc "people come and go", nó ảnh hưởng khá nhiều đến bản thân và team. Mình may mắn vì team mình khá ổn định nhưng nhìn qua nhiều team khác thì không được vậy
 
 
 Thôi hôm nay đến đây thôi khi nào có thời gian lại than tiếp....
