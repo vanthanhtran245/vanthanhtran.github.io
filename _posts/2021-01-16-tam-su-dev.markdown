@@ -1,10 +1,49 @@
 ---
 layout: post
 title: Tâm sự nghề
-date: 2017-09-12 00:00:00 +0300
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+date: 2021-01-18 00:00:00 +0300
+description: Tam su dev
 img: how-to-start.jpg # Add image post (optional)
-tags: [Programming, Learn] # add tag
+tags: [Thinking] # add tag
 ---
 
-Viết gì bây giờ nhỉ
+Hôm nay nhân tiện dự án vừa release nên cũng có chút thời gian ngồi ngẫm nghĩ lại một chút về cái nghề mình đang theo đuổi. Nói là tâm sự nhưng chắc là than vãn nhiều hơn là tâm sự
+
+Những tâm sự dưới đây không hẳn là những trăn trở ở thời điểm hiện tại mà đã được tích góp qua một thời gian dài mình đi làm. Có những điều mình thấy hiện tại đã ổn thỏa, có cái vừa phát sinh, có cái trước giờ vẫn vậy hề hề
+
+## Công việc
+
+Tất nhiên rồi, như tiêu đề là `Tâm sự nghề` nên mình muốn chia sẻ vấn đề này trước tiên. Sau một thời gian dài làm iOS mình thấy nó khá là nhỏ bé. Mình dạo này thích làm những việc phục vụ cho team như auto build hay viết cái core network gì đó vì mình rất ghét việc code giao diện hay làm mấy cái animation. Tất nhiên thích là một chuyện nhưng mà đến lúc task dí vào mặt thì cũng phải lo mà làm thôi
+
+Một điều mình trăn trở ở độ gần đây là có nên chuyển sáng một công việc khác hay một ngôn ngữ khác không. Mình không sợ làm không được ngôn ngữ khác vì cũng không đến nỗi dốt lắm mà không thấm được. Nhưng mà khi cân nhắc những gì đang có và đang làm ở thời điểm hiện tại mình lại thấy có lẽ mình nên hoàn thiện thật tốt cái đang theo đuổi đã
+
+## Định hướng công việc
+
+Cái này thì ở công ty hiện tại tầm 6 tháng thì mình sẽ ngồi nói chuyện với sếp và sếp cũng hay hỏi câu này. Thật ra ngay từ trước khi lần đầu mình checkpoint mình cũng đã được mọi người nói là sếp sẽ hỏi câu này tuy nhiên ngay cả khi biết trước mình cũng khá lúng túng và cũng không chuẩn bị được một câu trả lời vừa thuyết phục bản thân cũng như làm sếp thỏa mãn. Rồi cũng chốt câu "Làm tốt việc mình đang làm"
+
+## Năng lực bản thân
+
+Vấn đề này thì cũng khó đánh giá được. Mình không cho rằng bản thân mình kém nhưng mà để nói giỏi thì càng không. Nói chung là tạm được hoặc đủ xài. So với các bạn trẻ hiện nay thì mình cảm thấy các bạn ấy trội hơn mình. Các bạn được đào tạo khá bài bản và có một định hướng cũng như lộ trình khá rõ ràng, được tiếp cận thực tế từ khá sớm. Mình thì không được như vậy vì backgroud của mình là dân kinh tế và cũng vì đam mê nên mới chuyển hướng sang ngành này
+
+Nhiều đứa bạn đại học và thầy mình hay thấy mình than thường bảo `Em hơn mấy đứa kinh nghiệm mà, lo gì mà cứ than hoài`. Thật ra mình thấy nó chỉ đúng một phần. Giữa năm 1 với năm 3 hay 4 còn có sự khác biệt chứ giữa 5 và 7 năm thì không khác nhau nhiều lắm.
+
+## Môi trường làm việc
+
+Nói về vấn đề này thì mình muốn đề cập đến sếp, đồng nghệp và team
+
+### Sếp
+
+Sếp thì chắc mình cũng chả có gì dể phàn nàn. Mình cũng ít nói chuyện hay trao đổi với sếp nên chắc cũng chả có gì xung khắc. Trước giờ đi làm mình cũng trải qua nhiều sếp có các phong thái khác nhau như điềm đạm, hài hướng, nóng tính.... nhưng nói chung ở mỗi người đều cho mình nhiều thứ bổ ích để học tập nên mình chả có định kiến gì. Mà nếu có chắc mình cũng nói thẳng với sếp chứ mình cũng chả muốn giữa trong bụng làm gì cho mệt người.
+
+### Đồng nghiệp
+
+Mình thấy ở đây đồng nghiệp khá vui vẻ, mình may mắn khi ở công ty đầu được làm việc với rất nhiều người và hiểu được hầu hết các bạn khác trong công ty. Hiện tại thì mình thường làm việc với team và cũng ít khi trao đổi với các đồng nghiệp khác trừ khi có buổi seminar hay buổi giới thiệu gì đó.
+
+### Team
+
+Nói về team thì thường xét trên 2 yếu tố là `văn hóa của bản thân` và `văn hóa team`. 
+* Văn hóa bản thân: Cái này tùy tính cách mỗi người. Mình may mắn khi vào làm với các bạn có nét tính cách tương đồng và khá vui vẻ. Bạn trẻ có và người lớn tuổi hơn có nhưng chung quy lại mình thấy bọn mình khá hòa hợp trong các vấn đề.
+* Văn hóa team: Cái này được tạo bởi `văn hóa của thành viên trong team` và thường ảnh hưởng bới `văn hóa công ty`. Như mình nói ở trên vì mình và các bạn trong team cũng có tính cách tương đồng nên nói chung team mình khá vui vẻ. Các bạn giúp đỡ nhau khá nhiều. Nói đến `văn hóa công ty` thì thường nói đến việc `people come and go`, nó ảnh hưởng khá nhiều đến bản thân và team. Mình may mắn vì team mình khá ổn định nhưng nhìn qua nhiều team khác thì không được vậy
+
+
+Thôi hôm nay đến đây thôi khi nào có thời gian lại than tiếp....

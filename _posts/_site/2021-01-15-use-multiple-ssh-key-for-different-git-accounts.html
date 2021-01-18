@@ -1,0 +1,52 @@
+<p>At joining my current work place, I was asked to create a new GitHub account before I can be a member of the company’s GitHub organization and in turn get access to all the private project repositories.</p>
+
+<p>It wasn’t until I left the work laptop in my locker but still needed to get something done that I felt the need to manage both of my GitHub accounts on my personal laptop (who needs work-life balance?)</p>
+
+<p>To make things more complicated, the project I’m working on references other private repositories in its Cocoapods Specs dependencies block and needs to access them at <code class="language-plaintext highlighter-rouge">pod repo push</code> , which defaults to using my personal GitHub account’s ssh-key.
+After some trials and failures, here’s how I finally got it to work:</p>
+
+<h3 id="1-create-a-new-ssh-key-and-add-it-to-the-work-github-account">1. Create a new ssh-key and add it to the work GitHub account</h3>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">ssh-keygen -t rsa -b 4096 -C "my_work_email@my_company.com"
+</span></code></pre></div></div>
+
+<p>Say the new ssh-key was named “work_rsa”, now copy the content of the newly generated public key file (work_rsa.pub in this example) and paste it to the work GitHub account’s setting page as described in the GitHub help page.</p>
+
+<h3 id="2-modify-the-ssh-config-file--sshconfig">2. Modify the ssh config file ( <code class="language-plaintext highlighter-rouge">~/.ssh/config</code>)</h3>
+
+<p>Open the config file in a text editor (create it if there isn’t one in the ~/.ssh folder yet) and add the following to it:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">#</span><span class="w"> </span>Personal GitHub account
+<span class="go">Host github.com
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+</span><span class="gp">#</span><span class="w"> </span>Work GitHub account
+<span class="go">Host github.com-work
+ HostName github.com
+ User git
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/work_rsa
+</span></code></pre></div></div>
+
+<h3 id="3-clone-the-work-project-repo-with-a-slightly-different-address">3. Clone the work project repo (with a slightly different address)</h3>
+
+<p>To clone the work project repo using the new ssh-key we need to tweak a little bit on the repo’s ssh address. The host url needs to match the Host defined in the ssh config file from last step, namely, where in the address there is github.com, replace it with github.com-work.</p>
+
+<p>E.g., with the following private repo ssh address we get from GitHub:</p>
+
+<blockquote>
+  <p>git@github.com:[my work GitHub group]/[my project].git</p>
+</blockquote>
+
+<p>We need to tweak its address like this before we can <code class="language-plaintext highlighter-rouge">git clone</code> it:</p>
+
+<blockquote>
+  <p>git@github.com-work:[my work GitHub group]/[my project].git</p>
+</blockquote>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">git clone git@github.com-work:[my work GitHub group]/[my project].git
+</span></code></pre></div></div>
