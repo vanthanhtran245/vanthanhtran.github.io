@@ -11,3 +11,18 @@ I'm trying to prepare a single dynamic framework for third party. My framework (
 
 Usually below is the approach
 
+1. Added B.framework to the project.
+2. Added B.framework to "Linked Frameworks and Libraries" in the corresponding target.
+3. Built A.framework.
+4. Created a demo application and included A.framework to the project.
+5. Added A.framework to "Embedded Binaries".
+
+![Alt Text](https://media.tenor.com/images/f912a1ad7406e614e2fe33ab8d54179a/tenor.gif)
+
+But after run a application you will see the message
+
+![FW]({{site.baseurl}}/assets/img/fwfail.png)
+
+# Why?
+
+![Alt Text](https://media4.giphy.com/media/cOztgarXataikLpRII/200.gif)
