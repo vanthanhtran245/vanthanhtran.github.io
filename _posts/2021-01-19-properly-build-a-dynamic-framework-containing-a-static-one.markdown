@@ -35,10 +35,10 @@ But after run a application you will see the message
 
 ![Alt Text](https://media.tenor.com/images/0cb034c5f8c08a9c2e6be0b36192e670/tenor.gif)
 
-## If the static library B is only used for internal implementation of framework A, you can add the `@_implementationOnly import B` everywhere in framework A, and the requirement to know about the module information of B will disappeared for the consuming client side since the compiler does not need to expose back the API of module B (again this works if no public symbols in A refers to symbols in B)!
+* If the static library B is only used for internal implementation of framework A, you can add the `@_implementationOnly import B` everywhere in framework A, and the requirement to know about the module information of B will disappeared for the consuming client side since the compiler does not need to expose back the API of module B (again this works if no public symbols in A refers to symbols in B)!
 
-## If A exports types in B, then you need to tell the compiler where to find the module / interfaces of B even when consuming A! This is why moving files around or trying to copy the framework A to an other machine without bringing the interface of B will cause a compiler issue telling you Missing required module 'B'. Simply tell the compiler where to find it the module information of B using HEADER_SEARCH_PATHS ! 
+* If A exports types in B, then you need to tell the compiler where to find the module / interfaces of B even when consuming A! This is why moving files around or trying to copy the framework A to an other machine without bringing the interface of B will cause a compiler issue telling you Missing required module 'B'. Simply tell the compiler where to find it the module information of B using HEADER_SEARCH_PATHS ! 
 
-## Be careful, the framework A still knows about the absolute path of the interfaces of B, so if you update HEADER_SEARCH_PATHS for the interface of B after moving the framework A around and do not delete the original module map, you may get a build error with Redefinition of module 'B'.
+* Be careful, the framework A still knows about the absolute path of the interfaces of B, so if you update HEADER_SEARCH_PATHS for the interface of B after moving the framework A around and do not delete the original module map, you may get a build error with Redefinition of module 'B'.
 
 ![Alt Text](https://media.tenor.com/images/f912a1ad7406e614e2fe33ab8d54179a/tenor.gif)
