@@ -3,7 +3,7 @@ layout: post
 title: Properly build a dynamic framework containing a static one
 date: 2021-01-18 00:00:00 +0300
 description: Properly build a dynamic framework containing a static one
-img: fw.jpeg# Add image post (optional)
+img: fw.jpg# Add image post (optional)
 tags: [Framework] # add tag
 ---
 
